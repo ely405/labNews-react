@@ -1,0 +1,127 @@
+@import "./_variables.scss";
+@import "~bootstrap/scss/bootstrap";
+
+.h-small{
+    height: 10rem;
+}
+.h-medium{
+    height: 20rem;
+}
+.h-large{
+    height: 35rem;
+}
+
+//latest news 
+#latest-news-0{
+    &>div{
+        bottom: 0;
+    }
+}
+
+.playBtn {
+    right: 5%;
+    top: 5%;
+}
+
+.h-98pr{
+    height: 98%;
+} 
+
+#world-news-27 .playBtn, #world-news-28 .playBtn {
+    left: 31%;
+    width: 70px;
+    height: 70px;
+}
+
+@media (min-width: 768px) {
+
+    #app{
+        margin-top: 12rem;
+    }
+
+    .h-md-medium{
+        height: 20rem;
+    }
+
+    .bg-md-orange{
+        background-color: $first-color;
+    }
+    
+    .text-white-md{
+        color: $letter-color-white;
+    }
+
+    //latest news
+    #latest-news-2 img, #latest-news-3 img  {
+        height: 20rem;
+    }
+
+    //world newws
+    #world-news-4 img.card-img-top {
+        height: 35rem;
+    }
+
+    // carousel
+    .carousel-inner .active,
+    .carousel-inner .active + .carousel-item,
+    .carousel-inner .active + .carousel-item + .carousel-item {
+        display: block;
+    }
+    
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item,
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
+        transition: none;
+    }
+    
+    .carousel-inner .carousel-item-next,
+    .carousel-inner .carousel-item-prev {
+      position: relative;
+      transform: translate3d(0, 0, 0);
+    }
+    
+    .carousel-inner .active.carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: absolute;
+        top: 0;
+        right: -33.3333%;
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+
+    .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+    .carousel-item-next.carousel-item-left + .carousel-item,
+    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item,
+    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+    
+    .carousel-inner .carousel-item-prev.carousel-item-right {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+    
+    .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+    .carousel-item-prev.carousel-item-right + .carousel-item,
+    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
+    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+        display: block;
+        visibility: visible;
+    }
+
+}
+
+//footer
+#btn-up{
+    top: 30%;
+    right: 0;
+}
